@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 const { config } = require('../config/cfg')
-// const { useNavigate } = require('react-router-dom')
+const { useNavigate } = require('react-router-dom')
 
 export function SetAPI() {
     const [url, setUrl] = useState('');
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     return (
         <div className={"modal-container modal-container-disable-background"}>
@@ -19,7 +19,7 @@ export function SetAPI() {
                         e.preventDefault()
                         config.serverAddress = url
                         console.log('Saved API URL as', config.serverAddress);
-                        // navigate("/play")
+                        navigate("/play")
                     }}>Ok</button>
                 </div>
             </div>
