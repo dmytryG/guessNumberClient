@@ -1,30 +1,13 @@
-<p align="center">
-  <br>
-  <img width="240" src="./src/assets/tapps.png" alt="logo of telegram web apps">
-  <br>
-  <br>
-</p>
+## [vite](https://vitejs.dev/) + [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/) Starter
 
-# Telegram Mini Apps(TMA) + React + TypeScript + Vite
+This setup includes:
+* [vite](https://vitejs.dev/)
+* [eslint](https://eslint.org/), [typescript-eslint](https://typescript-eslint.io/), [eslint-airbnb-config](https://github.com/airbnb/javascript), [prettier](https://prettier.io/)
+* [vitest](https://vitest.dev/), [jsdom](https://github.com/jsdom/jsdom), [@testing-library](https://testing-library.com/)
+* [react-router v6](https://reactrouter.com/en/main)
 
-Vite (which means "fast" in French) is a front-end build tool and development server that aims to provide a faster and leaner development experience for modern web projects. We will utilise Vite to create Telegram Mini App example.
+# References
 
-This template provides a minimal setup to get TMA working in Vite with React, TypeScript, HMR and some ESLint rules.
-
-## Usage
-
-```bash
-# npm
-npm install
-npm run dev --host
-```
-```bash
-# yarn
-yarn
-yarn dev --host
-```
-
-# Links
-- [Doc](https://docs.ton.org/develop/dapps/twa)
-- [Example TMA](https://t.me/vite_twa_example_bot/app)
-- [Link](https://twa-dev.github.io/vite-boilerplate/)
+* https://markus.oberlehner.net/blog/using-testing-library-jest-dom-with-vitest/
+* https://testing-library.com/docs/queries/about#priority
+* https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
