@@ -1,42 +1,81 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(23, 80, 87);
+  color: black;
+}
+
+.modal-container {
+  /*display: none; !* Hidden by default *!*/
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  border-radius: 5px;
+}
+
+.modal-container-disable-background {
+  background-color: rgba(16, 37, 45, 0); /* Fallback color */
+}
+
+.modal-child {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 60%; /* Could be more or less, depending on screen size */
+  position: absolute;
+  float: left;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 90%; /* Set a maximum height for the modal */
+  overflow-y: auto; /* Enable vertical scroll within the modal */
+}
+.modal-header {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: aliceblue;
   text-align: center;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: aliceblue;
+  padding: 25px;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button {
+  background-color: aliceblue;
+  padding: 10px;
+  color: #0E131F;
+  font-size: 12pt;
+  border: none;
+  border-radius: 10px;
 }
 
-.card {
-  padding: 2em;
+input {
+  background-color: aliceblue;
+  padding: 10px;
+  color: #0E131F;
+  font-size: 12pt;
+  border: none;
+  border-radius: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.full-width {
+  width: 100%;
 }
