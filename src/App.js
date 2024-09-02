@@ -3,7 +3,7 @@ import './App.css';
 // import {Route, Routes, HashRouter} from 'react-router-dom';
 // import Play from "./pages/Play";
 const {SetAPI} = require('./pages/SetAPI')
-const {Play} = require('./pages/Play')
+// const {Play} = require('./pages/Play')
 
 export default function App() {
   return (
