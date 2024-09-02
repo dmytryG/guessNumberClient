@@ -7,6 +7,7 @@ export function Play() {
     const [guess, setGuess] = useState(0)
     const [isBusy, setIsBusy] = useState(false)
     const [status, setStatus] = useState('')
+    const uid = window.Telegram.WebApp.initDataUnsafe.user.id
 
     return (
         <div className={"modal-container modal-container-disable-background"}>
@@ -22,7 +23,7 @@ export function Play() {
                                 <input value={guess} onChange={(e) => {setGuess(Number(e.target.value))}} />
                                 <button disabled={isBusy} className={"full-width"} onClick={async () => {
                                     setIsBusy(true)
-                                    const result = await GuessNumberService.guess(guess)
+                                    const result = await GuessNumberService.guess(guess, uid)
                                     setIsBusy(false)
                                     setHaveStarted(true)
                                     if (result === numberState.GUESSED) {
@@ -40,7 +41,7 @@ export function Play() {
 
                             : <button disabled={isBusy} className={"full-width"} onClick={async () => {
                                 setIsBusy(true)
-                                await GuessNumberService.start()
+                                await GuessNumberService.start(uid)
                                 setIsBusy(false)
                                 setHaveStarted(true)
                             }}>Start</button>
