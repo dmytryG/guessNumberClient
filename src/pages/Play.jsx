@@ -22,28 +22,40 @@ export function Play() {
                                 <p>Please, input your guess here</p>
                                 <input value={guess} onChange={(e) => {setGuess(Number(e.target.value))}} />
                                 <button disabled={isBusy} className={"full-width"} onClick={async () => {
-                                    setIsBusy(true)
-                                    const result = await GuessNumberService.guess(guess, uid)
-                                    setIsBusy(false)
-                                    setHaveStarted(true)
-                                    if (result === numberState.GUESSED) {
+                                    try {
+                                        setIsBusy(true)
+                                        const result = await GuessNumberService.guess(guess, uid)
+                                        setIsBusy(false)
+                                        setHaveStarted(true)
+                                        if (result === numberState.GUESSED) {
+                                            setHaveStarted(false)
+                                            setStatus("You have guessed! 🎉🎉🎉")
+                                        } else if (result === numberState.HIGHER) {
+                                            setStatus("We need to go HIGHER 🔼")
+                                        } else if (result === numberState.LOWER) {
+                                            setStatus("We need to go LOWER 🔽")
+                                        } else {
+                                            setStatus("Something really messed up 🤔")
+                                        }
+                                    } catch (e) {
+                                        setStatus(`Ooops error encountered ${e}`)
+                                        setIsBusy(false)
                                         setHaveStarted(false)
-                                        setStatus("You have guessed! 🎉🎉🎉")
-                                    } else if (result === numberState.HIGHER) {
-                                        setStatus("We need to go HIGHER 🔼")
-                                    } else if (result === numberState.LOWER) {
-                                        setStatus("We need to go LOWER 🔽")
-                                    } else {
-                                        setStatus("Something really messed up 🤔")
                                     }
                                 }}>Guess</button>
                             </div>
 
                             : <button disabled={isBusy} className={"full-width"} onClick={async () => {
-                                setIsBusy(true)
-                                await GuessNumberService.start(uid)
-                                setIsBusy(false)
-                                setHaveStarted(true)
+                                try {
+                                    setIsBusy(true)
+                                    await GuessNumberService.start(uid)
+                                    setIsBusy(false)
+                                    setHaveStarted(true)
+                                } catch (e) {
+                                    setStatus(`Ooops error encountered ${e}`)
+                                    setIsBusy(false)
+                                    setHaveStarted(false)
+                                }
                             }}>Start</button>
                     }
                     <p>{status}</p>
