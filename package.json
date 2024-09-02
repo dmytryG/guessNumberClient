@@ -19,7 +19,6 @@
     "react-router-dom": "^6.13.0"
   },
   "devDependencies": {
-    "@dmytryg/websocket-rush-api": "^1.0.46",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.12",
