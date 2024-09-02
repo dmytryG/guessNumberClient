@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import {config} from "../config/cfg";
-// import {useNavigate} from "react-router-dom";
+const { config } = require('../config/cfg')
+// const { useNavigate } = require('react-router-dom')
 
 export function SetAPI() {
     const [url, setUrl] = useState('');
