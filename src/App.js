@@ -8,6 +8,7 @@ const {Play} = require('./pages/Play')
 export default function App() {
     useEffect(() => {
         window.Telegram.WebApp.ready()
+        window.Telegram.WebApp.expand()
     }, []);
 
   return (
