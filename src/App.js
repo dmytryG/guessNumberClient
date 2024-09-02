@@ -8,12 +8,15 @@ const {Play} = require('./pages/Play')
 export default function App() {
   return (
     <div className="App">
+      before router
     <HashRouter>
       <Routes>
         <Route path="/" element={<SetAPI />}/>
         <Route path="/play" element={<Play />}/>
       </Routes>
     </HashRouter>
+      after router
+      <SetAPI />
     </div>
   );
 }
