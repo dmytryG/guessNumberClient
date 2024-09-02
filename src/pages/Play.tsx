@@ -1,4 +1,4 @@
-export function Play() {
+export default function Play() {
     return (
         <div className={"modal-container modal-container-disable-background"}>
             <div className={"modal-child"}>

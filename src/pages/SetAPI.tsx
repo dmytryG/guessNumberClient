@@ -1,4 +1,4 @@
-export function SetAPI() {
+export default function SetAPI() {
     return (
             <div className={"modal-container modal-container-disable-background"}>
                 <div className={"modal-child"}>

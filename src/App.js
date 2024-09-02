@@ -1,11 +1,19 @@
 import './App.css';
+// import {Route, Routes, HashRouter} from 'react-router-dom';
+import SetAPI from ".\\pages\\SetAPI";
+// import Play from "./pages/Play";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      Application
+      <SetAPI />
+    {/*<HashRouter>*/}
+    {/*  <Routes>*/}
+    {/*    <Route path="/" element={<SetAPI />}/>*/}
+    {/*    <Route path="/play" element={<Play />}/>*/}
+    {/*  </Routes>*/}
+    {/*</HashRouter>*/}
     </div>
   );
 }
 
-export default App;
