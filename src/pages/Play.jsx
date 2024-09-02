@@ -50,6 +50,7 @@ export function Play() {
                                     setIsBusy(true)
                                     await GuessNumberService.start(uid)
                                     setIsBusy(false)
+                                    setStatus("")
                                     setHaveStarted(true)
                                 } catch (e) {
                                     setStatus(`Ooops error encountered ${e}`)
