@@ -1,40 +1,25 @@
 {
   "compilerOptions": {
-//    "target": "esnext",
-//    "lib": ["DOM", "DOM.Iterable", "ESNext", "es5", "es6"],
-    "allowJs": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "module": "commonjs",
-    "moduleResolution": "Node",
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "noImplicitAny": false,
 
-    /* Type Checking */
+    /* Linting */
     "strict": true,
-    "strictPropertyInitialization": false,
-    "useDefineForClassFields": false,
-
-    /* Interop Constraints */
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-
-    "types": ["node"],
-
-    /* Language and Environment */
-    "target": "esnext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext", "es5", "es6"],
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-
-    /* Emit */
-    "outDir": "./dist",
-    "downlevelIteration": true
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*"],
-  "references": [{ "path": "./tsconfig.node.json" }],
-  "exclude": ["dist", "node_modules"],
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
