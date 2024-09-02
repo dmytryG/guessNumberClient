@@ -8,15 +8,18 @@ const {SetAPI} = require('./pages/SetAPI')
 export default function App() {
   return (
     <div className="App">
-      before router
-    {/*<HashRouter>*/}
-    {/*  <Routes>*/}
-    {/*    <Route path="/" element={<SetAPI />}/>*/}
-    {/*    <Route path="/play" element={<Play />}/>*/}
-    {/*  </Routes>*/}
-    {/*</HashRouter>*/}
-      after router
-      <SetAPI />
+        <div>
+            before router
+            {/*<HashRouter>*/}
+            {/*  <Routes>*/}
+            {/*    <Route path="/" element={<SetAPI />}/>*/}
+            {/*    <Route path="/play" element={<Play />}/>*/}
+            {/*  </Routes>*/}
+            {/*</HashRouter>*/}
+            after router
+            <SetAPI />
+        </div>
+
     </div>
   );
 }
