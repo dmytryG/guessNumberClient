@@ -19,7 +19,7 @@ export function Play() {
                     {
                         haveStarted ?
                             <div className={"list"}>
-                                <p>Please, input your guess here</p>
+                                <p>Please, input your guess here (the number between 0 and 50)</p>
                                 <input value={guess} onChange={(e) => {setGuess(Number(e.target.value))}} />
                                 <button disabled={isBusy} className={"full-width"} onClick={async () => {
                                     try {
