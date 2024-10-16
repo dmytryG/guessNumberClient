@@ -5,6 +5,8 @@ const { useNavigate } = require('react-router-dom')
 export function SetAPI() {
     const [url, setUrl] = useState('');
     const navigate = useNavigate();
+    console.log('Payload', window.Telegram.WebApp.initData)
+    console.log('Payload unsafe', window.Telegram.WebApp.initDataUnsafe)
 
     return (
         <div className={"modal-container modal-container-disable-background"}>
